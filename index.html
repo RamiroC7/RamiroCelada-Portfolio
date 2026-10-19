@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ramiro Celada</title>
+  <meta name="description" content="Ramiro Celada, cofundador de KEI Software. Sistemas, tiendas online y herramientas con IA para negocios reales." />
+  <meta property="og:title" content="Ramiro Celada" />
+  <meta property="og:description" content="Cofundador de KEI Software. Sistemas, tiendas online y herramientas con IA." />
+  <meta property="og:image" content="assets/img/ramiro.jpg" />
+  <meta name="theme-color" content="#ededc5" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!--PAGE-START-->
+  <header class="nav">
+    <div class="nav-in">
+      <a href="#top" class="brand">Ramiro Celada</a>
+      <nav class="links">
+        <a href="#proyectos" data-i18n="nav_work"></a>
+        <a href="#sobre-mi" data-i18n="nav_about"></a>
+        <a href="#contacto" data-i18n="nav_contact"></a>
+      </nav>
+      <button class="lang" id="lang" type="button" aria-label="Idioma / Language"><span data-l="es">ES</span><span data-l="en">EN</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero dark">
+      <div class="wrap hero-in">
+        <figure class="h-photo"><img src="assets/img/ramiro.jpg" alt="Ramiro Celada" width="900" height="1200" /></figure>
+        <h1 class="h-title"><span>Ramiro</span><em>Celada</em></h1>
+        <div class="h-text">
+          <p class="h-role" data-k="role"></p>
+          <p class="h-lead" data-k="lead"></p>
+          <a class="pill" href="#proyectos" data-k="cta1"></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="band" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+    <section id="sobre-mi" class="orange">
+      <div class="wrap about">
+        <h2 class="center" data-k="about_title"></h2>
+        <div class="about-text" id="about"></div>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="dark">
+      <div class="wrap">
+        <h2 data-k="projects_title"></h2>
+        <p class="sub" data-k="projects_sub"></p>
+        <div id="projects" class="projects"></div>
+        <h3 class="also" data-k="also"></h3>
+        <div class="extras" id="extras"></div>
+      </div>
+    </section>
+
+    <section class="peach">
+      <div class="wrap">
+        <h2 data-k="process_title"></h2>
+        <ol class="process" id="process"></ol>
+        <h3 class="also" data-k="stack_title"></h3>
+        <ul class="stack" id="stack"></ul>
+      </div>
+    </section>
+
+    <section id="contacto" class="dark contact">
+      <div class="wrap">
+        <h2 data-k="contact_title"></h2>
+        <p class="sub" data-k="contact_sub"></p>
+        <p class="mail" id="mail"></p>
+        <div class="pills">
+          <button class="pill solid" id="copy" type="button"></button>
+          <a class="pill" id="li" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="pill" id="gh" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="band" aria-hidden="true"><div class="track" id="marquee2"></div></div>
+  </main>
+
+  <footer class="foot"><span data-k="footer"></span> · <span id="year"></span></footer>
+<!--PAGE-END-->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
