@@ -51,16 +51,16 @@ window.PORTFOLIO = {
 
     about_title: { es: "Perfil", en: "About" },
     about_p1: {
-      es: "Estudio Ingeniería en Sistemas en la UTN y junto a mis dos socios fundé KEI Software, donde hacemos software a medida para gimnasios, comercios y emprendimientos.",
-      en: "I study Information Systems Engineering at UTN, and with my two partners I co-founded KEI Software, where we build custom software for gyms, retailers and startups.",
+      es: "Soy cofundador de <a class=\"kei\" href=\"https://keisoftware.dev\" target=\"_blank\" rel=\"noopener\">KEI Software</a>. Convierto problemas reales de negocios en software que se usa todos los días: sistemas de gestión, tiendas online y herramientas con IA.",
+      en: "I'm co-founder of <a class=\"kei\" href=\"https://keisoftware.dev\" target=\"_blank\" rel=\"noopener\">KEI Software</a>. I turn real business problems into software people use every day: management systems, online stores and AI tools.",
     },
     about_p2: {
-      es: "Me gusta agarrar un problema concreto de un cliente, como \"cargar 500 productos me lleva semanas\", y convertirlo en algo que se usa todos los días.",
-      en: "I like taking a concrete client problem, like \"uploading 500 products takes me weeks\", and turning it into something people use every day.",
+      es: "Me enfoco en el resultado: que cargar un producto sea sacar dos fotos, que un coach vea sus números sin pedírselos a nadie y que un comercio venda online además de en sus locales.",
+      en: "I focus on outcomes: uploading a product takes two photos, a coach sees the numbers without asking anyone, and a retailer sells online as well as in-store.",
     },
     about_p3: {
-      es: "Trabajo con desarrollo asistido por IA: planifico en tickets, programo junto a Claude Code, reviso cada cambio, pruebo y publico.",
-      en: "I work with AI-assisted development: I plan in tickets, code alongside Claude Code, review every change, test and ship.",
+      es: "Trabajo rápido y ordenado: divido cada proyecto en tareas claras, desarrollo con IA (Claude Code) para avanzar más rápido y pruebo todo antes de publicarlo. Y como estudio Ingeniería en Sistemas en la UTN, siempre estoy sumando algo nuevo.",
+      en: "I work fast and organized: I break every project into clear tasks, build with AI (Claude Code) to move faster and test everything before it ships. And since I study Information Systems Engineering at UTN, I'm always adding something new.",
     },
     process_title: { es: "Cómo trabajo", en: "How I work" },
     process: [
@@ -85,7 +85,7 @@ window.PORTFOLIO = {
   // Textos de la portada y títulos de secciones
   copy: {
     hi: { es: "Hola, soy", en: "Hi, I'm" },
-    role: { es: "Cofundador de <b>KEI Software</b> · Estudiante de Ingeniería en Sistemas (UTN)", en: "Co-founder of <b>KEI Software</b> · Information Systems Engineering student (UTN)" },
+    role: { es: "Cofundador de <a class=\"kei\" href=\"https://keisoftware.dev\" target=\"_blank\" rel=\"noopener\">KEI Software</a> · Estudiante de Ingeniería en Sistemas (UTN)", en: "Co-founder of <a class=\"kei\" href=\"https://keisoftware.dev\" target=\"_blank\" rel=\"noopener\">KEI Software</a> · Information Systems Engineering student (UTN)" },
     lead: { es: "Construyo sistemas, tiendas online y herramientas con IA para negocios reales de Córdoba.", en: "I build systems, online stores and AI tools for real businesses in Córdoba, Argentina." },
     cta1: { es: "Ver proyectos", en: "See my work" },
     cta2: { es: "Escribime", en: "Get in touch" },
@@ -122,7 +122,7 @@ window.PORTFOLIO = {
   projects: [
     {
       id: "carga",
-      // Capturas: poné las imágenes en assets/projects/ y agregalas acá, ej: ["assets/projects/carga-1.png"]
+      // Capturas: subí las imágenes junto al resto y agregalas acá, ej: ["carga-1.png"]
       images: [],
       frame: "phone",
       highlights: [
@@ -161,8 +161,8 @@ window.PORTFOLIO = {
     },
     {
       id: "stability",
-      // Capturas: poné las imágenes en assets/projects/ y agregalas acá, ej: ["assets/projects/stability-1.png"]
-      images: ["assets/projects/stability-2.jpg", "assets/projects/stability-3.jpg"],
+      // Capturas: subí las imágenes junto al resto y agregalas acá
+      images: ["stability-2.jpg", "stability-3.jpg"],
       stories: true,
       frame: "browser",
       highlights: [
@@ -200,8 +200,8 @@ window.PORTFOLIO = {
     },
     {
       id: "ogcircle",
-      // Capturas: poné las imágenes en assets/projects/ y agregalas acá, ej: ["assets/projects/ogcircle-1.png"]
-      images: [],
+      // Capturas: subí las imágenes junto al resto y agregalas acá, ej: ["ogcircle-1.png"]
+      images: ["og-1.jpg", "og-2.jpg"],
       frame: "browser",
       highlights: [
         { es: "Panel del usuario y videos de formación", en: "User dashboard and training videos" },
@@ -231,12 +231,12 @@ window.PORTFOLIO = {
         { es: "En el cotizador marítimo: identificar el producto a partir de una foto usando IA.", en: "In the sea-freight quoter: identifying a product from a photo using AI." },
       ],
       stack: ["Next.js", "React", "TypeScript", "Supabase", "Mercado Pago", "Playwright", "Vercel"],
-      link: null,
+      link: "https://ogcircle.vercel.app",
       visual: "modules",
     },
     {
       id: "riegos",
-      // Capturas: poné las imágenes en assets/projects/ y agregalas acá, ej: ["assets/projects/riegos-1.png"]
+      // Capturas: subí las imágenes junto al resto y agregalas acá, ej: ["riegos-1.png"]
       images: [],
       frame: "browser",
       highlights: [
@@ -269,29 +269,30 @@ window.PORTFOLIO = {
     },
     {
       id: "fidalgo",
-      // Capturas: poné las imágenes en assets/projects/ y agregalas acá, ej: ["assets/projects/fidalgo-1.png"]
-      images: [],
+      // Capturas: subí las imágenes junto al resto y agregalas acá, ej: ["fidalgo-1.png"]
+      images: ["fidalgo-1.jpg", "fidalgo-2.jpg"],
       frame: "browser",
       highlights: [
-        { es: "Diseño y desarrollo de la landing", en: "Landing page design and development" },
+        { es: "Una web con la estética propia del estudio", en: "A website with the studio's own look" },
+        { es: "Trabajos, reels y servicios en un solo lugar", en: "Work, reels and services in one place" },
+        { es: "Contacto directo para pedir presupuesto", en: "Direct contact to request a quote" },
       ],
       kind: { es: "Landing page", en: "Landing page" },
       color: "amber",
       status: "live",
       client: "Fidalgo Studio",
-      // PENDIENTE: completar con lo que hace Fidalgo Studio y el link
       title: { es: "Landing de Fidalgo Studio", en: "Fidalgo Studio landing page" },
       summary: {
-        es: "Landing page para el emprendimiento de Tomás Fidalgo.",
-        en: "Landing page for Tomás Fidalgo's business.",
+        es: "La web de Fidalgo Studio, el estudio creativo de foto, video y contenido de Tomás Fidalgo en Tucumán.",
+        en: "The website for Fidalgo Studio, Tomás Fidalgo's photo, video and content studio in Tucumán.",
       },
       problem: null,
       how: null,
       mine: [
         { es: "Diseño y desarrollo de la landing.", en: "Landing page design and development." },
       ],
-      stack: ["HTML", "CSS", "JavaScript", "Vercel"],
-      link: null,
+      stack: ["Diseño web", "Desarrollo web", "Vercel"],
+      link: "https://fidalgo-studio-landingpage.vercel.app",
       visual: "placeholder",
     },
   ],
@@ -307,7 +308,7 @@ window.PORTFOLIO = {
         en: "Our company site: team section, real testimonials and Google Search Console.",
       },
       tags: ["Next.js", "SEO"],
-      link: null,
+      link: "https://keisoftware.dev",
     },
     {
       title: { es: "Contenido para redes de KEI", en: "KEI social media content" },

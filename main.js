@@ -137,6 +137,14 @@
   }
   function framed(p) {
     const host = p.link ? p.link.replace(/^https?:\/\//, "") : p.client;
+    // Landing publicada: captura real que se va pasando sola y, al tocarla, abre el sitio
+    if (p.link && p.images && p.images.length && !p.stories) {
+      const imgs = p.images.map((src, i) => `<img src="${esc(src)}" alt="${esc(p.client)} · ${L("captura", "screenshot")} ${i + 1}"${i ? "" : ' class="on"'} />`).join("");
+      return `<a class="frame browser live-site" href="${esc(p.link)}" target="_blank" rel="noopener" aria-label="${L("Abrir", "Open")} ${esc(host)}">
+        <div class="frame-bar"><i></i><i></i><i></i><span>${esc(host)}</span></div>
+        <div class="screen"><div class="fade-shots">${imgs}</div><span class="open-site">${L("Visitar sitio", "Visit site")} ↗</span></div>
+      </a>`;
+    }
     return p.frame === "phone"
       ? `<div class="frame phone"><div class="notch"></div><div class="screen">${media(p)}</div></div>`
       : `<div class="frame browser"><div class="frame-bar"><i></i><i></i><i></i><span>${esc(host)}</span></div><div class="screen">${media(p)}</div></div>`;
@@ -188,7 +196,16 @@
     document.querySelectorAll('[data-demo="chat"]').forEach(setupChat);
     document.querySelectorAll('.stab-real').forEach(setupStab);
 
-    $("#extras").innerHTML = D.extras.map((x) => `<div class="extra"><h4>${t(x.title)}</h4><p>${t(x.text)}</p></div>`).join("");
+    $("#extras").innerHTML = D.extras.map((x) => x.link
+      ? `<a class="extra" href="${esc(x.link)}" target="_blank" rel="noopener"><h4>${t(x.title)} ↗</h4><p>${t(x.text)}</p></a>`
+      : `<div class="extra"><h4>${t(x.title)}</h4><p>${t(x.text)}</p></div>`).join("");
+    // las capturas de las landings se van pasando solas
+    document.querySelectorAll(".fade-shots").forEach((box) => {
+      const imgs = [...box.querySelectorAll("img")];
+      if (imgs.length < 2 || reduce) return;
+      let k = 0;
+      sheetTimers.push(setInterval(() => { imgs[k].classList.remove("on"); k = (k + 1) % imgs.length; imgs[k].classList.add("on"); }, 3200));
+    });
   }
 
   // ---------- Stability: la landing real (historias) + panel del coach en su estilo ----------
@@ -247,7 +264,7 @@
     $("#marquee").innerHTML = band;
     $("#marquee2").innerHTML = band;
     $("#stats").innerHTML = C.stats.map((s) => `<div><b>${s.n}</b><span>${t(s.l)}</span></div>`).join("");
-    $("#about").innerHTML = [ui.about_p1, ui.about_p2, ui.about_p3].map((p) => `<p>${t(p).replace("KEI Software", "<b>KEI Software</b>")}</p>`).join("");
+    $("#about").innerHTML = [ui.about_p1, ui.about_p2, ui.about_p3].map((p) => `<p>${t(p)}</p>`).join("");
     $("#process").innerHTML = ui.process.map((x) => `<li><b>${t(x.t)}</b><span>${t(x.d)}</span></li>`).join("");
     $("#stack").innerHTML = D.stack.map((x) => `<li>${esc(x)}</li>`).join("");
     $("#mail").textContent = D.person.email;

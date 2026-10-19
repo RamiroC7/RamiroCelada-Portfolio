@@ -10,8 +10,8 @@ Página personal con mis proyectos, en español e inglés.
 | `data.js` | **Todo el texto.** Para cambiar o sumar un proyecto, se edita acá. |
 | `styles.css` | Los colores, tipografías y animaciones. |
 | `main.js` | La lógica: arma la página con los textos y cambia el idioma. |
-| `assets/img/` | Tu foto. |
-| `assets/projects/` | Las capturas de los proyectos. |
+| `ramiro.jpg` | Tu foto. |
+| `stability-*.jpg` | Las capturas de los proyectos (van sueltas, junto al resto). |
 
 ## Cómo verla en tu compu
 
@@ -30,6 +30,6 @@ En `data.js`, dentro de `projects`, copiá uno de los bloques `{ ... }` y cambi�
 
 ## Cómo sumar capturas de un proyecto
 
-1. Guardá las imágenes en `assets/projects/` (por ejemplo `carga-1.png`, `carga-2.png`).
-2. En `data.js`, buscá el proyecto y completá `images`, por ejemplo: `images: ["assets/projects/carga-1.png", "assets/projects/carga-2.png"]`.
+1. Subí las imágenes junto al resto de los archivos (por ejemplo `carga-1.png`, `carga-2.png`).
+2. En `data.js`, buscá el proyecto y completá `images`, por ejemplo: `images: ["carga-1.png", "carga-2.png"]`.
 3. Listo: al abrir el proyecto, en lugar de la demo se ven tus capturas y se pueden deslizar.
