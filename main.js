@@ -13,7 +13,7 @@
   };
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  let lang = store.get("lang") || ((navigator.language || "es").toLowerCase().startsWith("es") ? "es" : "en");
+  let lang = store.get("lang") || "en";
   const t = (o) => (o && typeof o === "object" ? o[lang] ?? o.es : o ?? "");
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const L = (es, en) => (lang === "es" ? es : en);
